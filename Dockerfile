@@ -17,6 +17,11 @@ RUN apt-get install locales && \
     locale-gen en_US.UTF-8 && \
     dpkg-reconfigure locales
 
+# USE php5.6 from ppa:ondrej
+RUN apt-get -y install python-software-properties software-properties-common && \
+    add-apt-repository ppa:ondrej/php5-5.6 -y && \
+    apt-get update
+
 RUN apt-get -y install \
     php5-cli \
     php5-curl \
@@ -49,6 +54,7 @@ RUN composer install && \
 
 # add configurations
 COPY conf/php.ini /etc/php5/cli/php.ini
+COPY conf/php-conf.d/opcache.ini /etc/php5/cli/conf.d/php.ini
 
 # This is needed by bower.
 RUN mkdir -p /var/www && \
