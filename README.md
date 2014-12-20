@@ -1,12 +1,21 @@
 ![Docker + Drupal](https://raw.githubusercontent.com/twinbit/drupal-docker-env/master/dde.png)
 
-## Drupal docker CLI
+## Drupal Docker CLI
 
 Packages:
- - PHP 5.5
- - Composer
+ - PHP 5.5 CLI
+ - Composer + packages
+    - "phing/phing": "2.7.*",
+    - "drupal/phing-drush-task": "1.0",
+    - "drush/drush": "6.*",
+    - "pear/console_table": "1.1.5",
+    - "squizlabs/php_codesniffer": "1.5.*",
+    - "phpmd/phpmd": "1.5.*",
+    - "drupal/coder": "7.2.*",
+    - "sebastian/phpcpd": "*"
  - Drush 6.2
- - Mysql client
+ - Mysql client 5.5
+ - Mailcatcher 0.5.12
 
 
 An automated build for this repo is available on the [Docker Hub](https://registry.hub.docker.com/u/twinbit).
