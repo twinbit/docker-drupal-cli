@@ -39,6 +39,7 @@ RUN apt-get update && \
     bundler \
     nodejs \
     ruby-dev && \
+    rm -rf /var/lib/apt/lists/* && \
     npm install -g bower && \
     curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \

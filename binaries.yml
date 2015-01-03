@@ -1,0 +1,21 @@
+cli:
+  phing:
+    env: "#!/usr/bin/env bash"
+    bin: "phing"
+    arguments: "${@}"
+  drush:
+    env: "#!/usr/bin/env bash"
+    bin: "drush"
+    arguments: "${@}"
+  mysql:
+    env: "#!/usr/bin/env bash"
+    bin: "mysql"
+    arguments: "-udocker -pdocker -hmysql"
+  phpcs:
+    bin: "phpcs"
+    env: "#!/usr/bin/env bash"
+    arguments: "${@}"
+  cli:
+    bin: ""
+    env: "#!/usr/bin/env bash"
+    arguments: "${@}"
