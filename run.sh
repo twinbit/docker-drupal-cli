@@ -1,4 +1,4 @@
-  #!/bin/bash
+#!/bin/bash
 
 ## Automatic discovery of ssh keys.
 export HOME=$APACHE_HOME
